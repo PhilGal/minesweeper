@@ -1,15 +1,12 @@
 package ru.philgal.minesweeper.common;
 
-public class CellFactory implements Factory<Cell> {
+public class CellFactory {
 
-    private Cell.Type type;
-
-    public CellFactory(Cell.Type type) {
-        this.type = type;
+    private CellFactory() {
     }
 
-    @Override
-    public Cell create() {
+    
+    public static Cell create(Cell.Type type) {
         switch (type) {
             case MINE:
                 return new MineCell();

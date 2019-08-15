@@ -1,21 +1,8 @@
 package ru.philgal.minesweeper.common;
 
-import java.util.List;
+public class MediumField extends BaseField {
 
-public class MediumField implements Field {
-
-    @Override
-    public int fieldSize() {
-        return 16;
+    MediumField() {
+        super(16, 40);
     }
-
-    @Override
-    public int minesCount() {
-        return 40;
-    }
-
-    @Override
-    public List<Cell> getCells() {
-		return null;
-	}
 }
